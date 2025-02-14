@@ -24,3 +24,22 @@
 
 <sub>Fonte: Material produzido pelo autor(2025).</sub>
 </div>
+
+## Requisitos Não Funcionais (RNFs)
+&emsp;&emsp;Os requisitos não funcionais do sistema estão dispostos a seguir:
+
+<div align="center">
+<sup>Quadro 2 - Requisitos Não Funcionais</sup>
+
+| **ID**   | **Descrição**  | **Pré-condição**  | **Procedimento**  | **Resultado esperado**  | **Pós-condição**  |
+|---------|-------------|-----------------|----------------|----------------------|----------------|
+| **RNF01** | O sistema deve carregar a tela inicial em no máximo 2 segundos. | O usuário acessa o jogo pela primeira vez. | Medir o tempo de carregamento da página. | O tempo registrado deve ser menor ou igual a 2 segundos. | O usuário pode interagir com a interface sem atrasos perceptíveis. |
+| **RNF02** | O sistema deve ser responsivo e funcionar corretamente em dispositivos móveis e desktops. | O jogo é acessado em diferentes tamanhos de tela. | Verificar se o layout, os componentes e as cores são consistentes em resoluções variadas. | A interface se ajusta corretamente sem distorções de cores, quebra de layout ou omissão/distorção de componentes. | O jogo pode ser jogado de forma fluida em qualquer dispositivo. |
+| **RNF03** | O sistema deve suportar até 100 partidas simultâneas sem degradação perceptível no desempenho, ou seja, sem perda de funcionalidade e sem demora consideravelmente superior de tempo de resposta. | O tempo de resposta do servidor com uma partida é registrado e, após isso, o servidor inicia múltiplas partidas ativas. | O tempo de resposta do sistema com 100 partidas concorrentes é registrado. | O sistema continua operando sem perda de funcionalidade e com o tempo de resposta igual ou de até 10% a mais em comparação com o tempo inicial registrado. | A experiência do usuário permanece estável. |
+| **RNF04** | O sistema deve criptografar todas as comunicações entre cliente e servidor. | O usuário realiza ações no jogo. | Interceptar e inspecionar todas as requisições feitas ao servidor para verificar o uso de HTTPS e criptografia. | Todos as requisições interceptadas utilizam protocolo HTTPS e todos os dados trafegados estão criptografados. | As informações dos jogadores permanecem protegidas. |
+| **RNF05** | O sistema deve manter a disponibilidade mínima de 99,5% ao longo do mês. | O sistema está implantado e operacional. | Monitorar uptime da aplicação com ferramentas de controle e monitoramento. | O tempo de inatividade da aplicação não ultrapassa 0,5% do tempo relativo a um mês comercial, cerca de 3 horas e 36 minutos. | O sistema permanece acessível para os usuários. |
+| **RNF06** | O sistema deve garantir tempo de resposta inferior a 400ms para ações do jogador. | O jogador realiza uma ação no jogo. | Medir o tempo de resposta da ação. | O tempo registrado deve ser menor que 400ms. | O jogador percebe respostas rápidas e fluidas. |
+| **RNF07** | O sistema deve seguir as diretrizes de acessibilidade (WCAG 2.1) para permitir o uso por pessoas com deficiência. | O jogo está acessível via navegadores compatíveis. | Realizar testes com leitores de tela e navegação por teclado. | O leitor de tela reconhece descrições de imagem e os textos presentes na interface e todos os componentes da interface podem ser acessados pelo teclado. | O jogo atende às normas e boas práticas de acessibilidade. |
+
+<sub>Fonte: Material produzido pelo autor(2025).</sub>
+</div>
